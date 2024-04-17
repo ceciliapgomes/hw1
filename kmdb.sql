@@ -194,12 +194,12 @@ INSERT INTO roles (movie_id, actor_id, character_name) VALUES
 
 -- The SQL statement for the movies output
 SELECT
-  m.title,
-  m.year_released,
-  m.rating,
-  s.name
-FROM movies m
-JOIN studios s ON m.studio_id = s.id;
+  movie.title,
+  movie.year_released,
+  movie.rating,
+  studio.name
+FROM movies movie
+JOIN studios studio ON movie.studio_id = studio.id;
 
 
 -- Prints a header for the cast output
