@@ -211,11 +211,11 @@ JOIN studios s ON m.studio_id = s.id;
 
 -- The SQL statement for the cast output
 SELECT
-  m.title,
-  a.name,
-  r.character_name
-FROM roles r
-JOIN movies m ON r.movie_id = m.id
-JOIN actors a ON r.actor_id = a.id;
+  movie.title,
+  actor.name,
+  role.character_name
+FROM roles role
+JOIN movies movie ON role.movie_id = movie.id
+JOIN actors actor ON role.actor_id = actor.id;
 
 
